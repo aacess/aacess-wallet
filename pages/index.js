@@ -19,6 +19,7 @@ export default function Home() {
       <div className="divSize">
         <h1 className="h1Size">Welcome to MegaMask Wallet</h1>
         <div className="mt-4 mb-8">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/aacesslogo.png" alt="logo" className="Image" />
         </div>
         <div className="mt-4">
