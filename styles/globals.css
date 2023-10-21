@@ -53,3 +53,33 @@
   width: 200px;
   height: 200px;
 }
+
+.divSize {
+  width: 1000px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-width: 2px;
+  border-style: solid;
+  border-color: lightgray;
+  border-radius: 0.5rem;
+  padding: 1.5rem 2rem;
+}
+
+.h1Size {
+  font-size: 2.25rem; /* 36px */
+  line-height: 2.5rem; /* 40px */
+  font-weight: 700;
+  text-align: center;
+  padding-bottom: 0.5rem;
+}
+
+/* To center the div in the middle of the screen */
+main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

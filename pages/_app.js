@@ -1,5 +1,4 @@
 import "@/styles/globals.css";
-import { ThemeProvider } from "@/components/ThemeProvider";
 import RootLayout from "@/components/Layout";
 import { motion } from "framer-motion";
 
@@ -19,14 +18,7 @@ export default function App({ Component, pageProps, router }) {
       }}
     >
       <RootLayout>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Component {...pageProps} />
-        </ThemeProvider>
+        <Component {...pageProps} />
       </RootLayout>
     </motion.div>
   );
