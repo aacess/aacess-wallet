@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import { Button } from "@/components/ui/button";
@@ -11,17 +12,28 @@ import {
   DialogTrigger,
   DialogClose,
 } from "@/components/ui/dialog";
-const inter = Inter({ subsets: ["latin"] });
 import React, { useEffect, useState } from "react";
 import { Web3AuthModalPack, Web3AuthConfig } from "@safe-global/auth-kit";
 import { CHAIN_NAMESPACES, WALLET_ADAPTERS } from "@web3auth/base";
 import { Web3AuthOptions } from "@web3auth/modal";
 import { OpenloginAdapter } from "@web3auth/openlogin-adapter";
 
+import { useWalletAuth } from "../pages/modules/wallet/hooks/useWalletAuth";
+import ConnectWallet from "../components/ConnectWallet";
+import { Transaction } from "../components/Transaction";
+import { useWindowSize } from "../lib/ui/hooks/useWindowSize";
+import Confetti from "react-confetti";
+
+const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   const [authKitSignData, setAuthKitSignData] = useState(null);
   const [web3AuthModalPack, setWeb3AuthModalPack] = useState(null);
   const [authenticationInitiated, setAuthenticationInitiated] = useState(false);
+
+  const { isConnecting, isConnected, connect, connectionError, wallet } =
+    useWalletAuth();
+  const { width: windowWidth, height: windowHeight } = useWindowSize();
+  const [transactionSuccess, setTransactionSuccess] = useState(false);
 
   useEffect(() => {
     async function signIn() {
@@ -135,8 +147,38 @@ export default function Home() {
                     Safe Wallet
                   </Button>
                 </div>
-                <div className="grid grid-cols-4 items-center gap-4">
+                {/* <div className="grid grid-cols-4 items-center gap-4">
                   <Button className="w-64">Cometh Wallet</Button>
+                </div> */}
+                <div>
+                  <br />
+                </div>
+                <div className="Cometh grid grid-cols-4 items-center gap-4">
+                  <div className="md:min-h-[70vh] gap-2 flex flex-col justify-center items-center">
+                    <div className="absolute left-1/2 z-10 mt-5 flex w-72 max-w-max -translate-x-1/2 px-4">
+                      <div className="ComethWallet">
+                        <div className="grid divide-green-900/5 bg-green-50">
+                          <ConnectWallet
+                            isConnected={isConnected}
+                            isConnecting={isConnecting}
+                            connect={connect}
+                            connectionError={connectionError}
+                            wallet={wallet}
+                          />
+                        </div>
+                        {isConnected && (
+                          <Transaction
+                            transactionSuccess={transactionSuccess}
+                            setTransactionSuccess={setTransactionSuccess}
+                          />
+                        )}
+                      </div>
+                    </div>
+                  </div>
+
+                  {transactionSuccess && (
+                    <Confetti width={windowWidth} height={windowHeight} />
+                  )}
                 </div>
               </div>
               <DialogFooter className="sm:justify-start">
