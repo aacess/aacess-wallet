@@ -89,7 +89,7 @@ main {
   flex: 1 1 auto; /* flex-auto */
   overflow: hidden; /* overflow-hidden */
   border-radius: 0.25rem; /* rounded */
-  background-color: rgb(27, 161, 69); /* bg-white */
+  background-color: white; /* bg-white */
   font-size: 0.875rem; /* text-sm */
   line-height: 1.5; /* leading-6 */
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); /* shadow-lg */

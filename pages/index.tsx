@@ -153,8 +153,8 @@ export default function Home() {
                 <div>
                   <br />
                 </div>
-                <div className="Cometh grid grid-cols-4 items-center gap-4">
-                  <div className="md:min-h-[70vh] gap-2 flex flex-col justify-center items-center">
+                <div className="grid grid-cols-4 items-center gap-4">
+                  <div className="gap-2 flex flex-col justify-center items-center">
                     <div className="absolute left-1/2 z-10 mt-5 flex w-72 max-w-max -translate-x-1/2 px-4">
                       <div className="ComethWallet">
                         <div className="grid divide-green-900/5 bg-green-50">
