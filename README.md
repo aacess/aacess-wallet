@@ -1,40 +1,19 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Welcome to MegaMask👋
+![alt text](megamask.jpeg)
+## Who Are We
+MegaMask - Money Enables Growth, Amplifying Multi-chain Advancements, Simplifying Knowledge.
 
-## Getting Started
+## Problem Identified
+Businesses, Freelancers, Creators, and DAOs have to send over their wallet addresses to another party and check manually, whether they have received payment or not. Furthermore, these payments are not tied to any particular invoice, making tracking transactions and accounting difficult.
 
-First, run the development server:
+## Whats the different between web2 and web3 (payoneer)
+- Crosschain interoperability
+- Automatic swapping of crypto funds
+- Concept of storing funds in escrow to be used for other purposes
+    - I get 200 USDC, I want 50 USDC to go towards a contract that pays for other bills, the other contract is a smart account
+ 
+## Notabe features
+Account Abstraction: Through utilizing Cometh and Safe Account Abstraction Protocols, MegaMask provides a seamless onboarding experience for existing and new users in creating their wallets and signing transactions.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Gas fees: With account abstraction in place, gas fees are "sponsored" through smart contracts.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
