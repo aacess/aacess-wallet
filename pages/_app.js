@@ -1,6 +1,7 @@
-import "@/styles/globals.css";
-import RootLayout from "@/components/Layout";
+import "../styles/globals.css";
+import RootLayout from "../components/Layout";
 import { motion } from "framer-motion";
+import { WalletProvider } from "./modules/wallet/services/context";
 
 export default function App({ Component, pageProps, router }) {
   return (
@@ -17,9 +18,11 @@ export default function App({ Component, pageProps, router }) {
         },
       }}
     >
-      <RootLayout>
-        <Component {...pageProps} />
-      </RootLayout>
+      <WalletProvider>
+        <RootLayout>
+          <Component {...pageProps} />
+        </RootLayout>
+      </WalletProvider>
     </motion.div>
   );
 }
