@@ -39,9 +39,7 @@ function ConnectWallet({
         </>
       );
     } else {
-      return (
-        <span className="text-white">Cometh Wallet</span>
-      );
+      return <span className="text-white">Cometh Wallet</span>;
     }
   };
 
