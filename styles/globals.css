@@ -83,3 +83,29 @@ main {
   align-items: center;
   justify-content: center;
 }
+.ComethWallet{
+  width: 100vw; /* w-screen */
+  max-width: 28rem; /* max-w-md */
+  flex: 1 1 auto; /* flex-auto */
+  overflow: hidden; /* overflow-hidden */
+  border-radius: 0.25rem; /* rounded */
+  background-color: rgb(27, 161, 69); /* bg-white */
+  font-size: 0.875rem; /* text-sm */
+  line-height: 1.5; /* leading-6 */
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); /* shadow-lg */
+  position: relative; /* Required for ring to work */
+}
+
+/* This is for the ring effect */
+.ComethWallet:before {
+  position: absolute;
+  top: -1px; /* ring-1 */
+  right: -1px; /* ring-1 */
+  bottom: -1px; /* ring-1 */
+  left: -1px; /* ring-1 */
+  border: 1px solid rgba(128, 128, 128, 0); /* ring-gray-900/5 */
+  border-radius: inherit; /* Match the parent's border-radius */
+}
+
+
+

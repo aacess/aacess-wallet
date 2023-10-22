@@ -39,7 +39,9 @@ function ConnectWallet({
         </>
       );
     } else {
-      return "Get your Wallet";
+      return (
+        <span className="text-white">Cometh Wallet</span>
+      );
     }
   };
 
@@ -55,6 +57,7 @@ function ConnectWallet({
         </button>
       ) : (
         <p className="flex items-center justify-center text-gray-900 bg-red-50">
+          {connectionError}
           Connection denied
         </p>
       )}
