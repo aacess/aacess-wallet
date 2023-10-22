@@ -22,7 +22,8 @@ import Confetti from "react-confetti";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  const { isConnecting, isConnected, connect, connectionError, wallet } = useWalletAuth();
+  const { isConnecting, isConnected, connect, connectionError, wallet } =
+    useWalletAuth();
   const { width: windowWidth, height: windowHeight } = useWindowSize();
   const [transactionSuccess, setTransactionSuccess] = useState(false);
   return (
@@ -55,6 +56,9 @@ export default function Home() {
                 <div className="grid grid-cols-4 items-center gap-4">
                   <Button className="w-64">Safe Wallet</Button>
                 </div>
+                <div>
+                  <br />
+                </div>
                 <div className="Cometh grid grid-cols-4 items-center gap-4">
                   <div className="md:min-h-[70vh] gap-2 flex flex-col justify-center items-center">
                     <div className="absolute left-1/2 z-10 mt-5 flex w-72 max-w-max -translate-x-1/2 px-4">
@@ -77,7 +81,7 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-                  
+
                   {transactionSuccess && (
                     <Confetti width={windowWidth} height={windowHeight} />
                   )}
