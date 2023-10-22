@@ -48,7 +48,7 @@ export function Transaction({
             <PlusIcon width={16} height={16} />
           </>
         )}{" "}
-        Increment counter
+        Get Wallet
       </button>
     );
   }
